@@ -1,0 +1,67 @@
+:host { display:block; height:100%; }
+
+.page{
+  min-height:100dvh;
+  display:grid;
+  place-items:center;
+  background:#0f172a;
+  padding:16px;
+}
+
+.calc{
+  width: min(360px, 92vw);
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+  background:#111827;
+  padding:16px;
+  border-radius:20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.display{
+  grid-column: 1 / -1;
+  background:#0b1020;
+  color:#e5e7eb;
+  font-size:2.2rem;
+  line-height:1.2;
+  padding:16px;
+  border-radius:14px;
+  text-align:right;
+  font-variant-numeric: tabular-nums;
+  overflow-x:auto;
+}
+
+.display.error{ color:#fecaca; }
+
+.btn{
+  padding:14px 10px;
+  font-size:1.25rem;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  background:#1f2937;
+  color:#e5e7eb;
+  transition: transform .05s ease, background .15s ease;
+  user-select:none;
+}
+
+.btn:hover{ background:#273244; }
+.btn:active{ transform: translateY(1px) scale(0.99); }
+
+.btn.op{ background:#334155; }
+.btn.util{ background:#374151; }
+
+.equals{
+  background:#2563eb;
+  color:white;
+}
+.equals:hover{ background:#1d4ed8; }
+
+.span-2{ grid-column: span 2; }
+
+/* Acessibilidade teclado */
+.btn:focus{
+  outline: 3px solid #60a5fa;
+  outline-offset: 2px;
+}

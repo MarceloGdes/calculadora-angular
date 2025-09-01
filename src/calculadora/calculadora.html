@@ -1,0 +1,33 @@
+<div class="page">
+
+  <div class="calc">
+
+    <div class="display">
+      {{display}}
+    </div>
+    <button class="btn util" (click)="clear()">C</button>
+    <button class="btn util" (click)="del()">DEL</button>
+    <button class="btn util">+-</button>
+    <button class="btn op" (click)="handleOperator('/')">/</button>
+
+    <button class="btn" (click)="inputDigit('7')">7</button>
+    <button class="btn" (click)="inputDigit('8')">8</button>
+    <button class="btn" (click)="inputDigit('9')">9</button>
+    <button class="btn op" (click)="handleOperator('*')">*</button>
+
+    <button class="btn" (click)="inputDigit('4')">4</button>
+    <button class="btn" (click)="inputDigit('5')">5</button>
+    <button class="btn" (click)="inputDigit('6')">6</button>
+    <button class="btn op" (click)="handleOperator('-')">-</button>
+
+    <button class="btn" (click)="inputDigit('1')">1</button>
+    <button class="btn" (click)="inputDigit('2')">2</button>
+    <button class="btn" (click)="inputDigit('3')">3</button>
+    <button class="btn op" (click)="handleOperator('+')">+</button>
+
+    <button class="btn span-2" (click)="inputDigit('0')">0</button>
+    <button class="btn">.</button>
+    <button class="btn equals" (click)="equals()">=</button>
+  </div>
+
+</div>
