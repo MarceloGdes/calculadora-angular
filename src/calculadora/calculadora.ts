@@ -1,11 +1,14 @@
 
 import { Component } from '@angular/core';
+import {Header} from '../header/header';
 
 type Op = '+' | '-' | '*' | '/' | null;
 
 @Component({
   selector: 'app-calculadora',
-  imports: [],
+  imports: [
+    Header
+  ],
   templateUrl: './calculadora.html',
   styleUrl: './calculadora.css'
 })
@@ -106,6 +109,4 @@ export class Calculadora {
     this.operator = null;
     this.waitingForSecond = false;
   }
-
-
 }
